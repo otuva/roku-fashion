@@ -9,6 +9,7 @@ import {createTheme, ThemeProvider} from "@mui/material";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Solutions from "./pages/Solutions";
+import Help from "./pages/Help";
 
 const App = () => {
     const [isDarkTheme, setIsDarkTheme] = useState(true);
@@ -40,6 +41,7 @@ const App = () => {
                         <Route path='/terms' element={<Terms/>}/>
                         <Route path='/privacy' element={<Privacy/>}/>
                         <Route path='/solutions' element={<Solutions/>}/>
+                        <Route path='/help' element={<Help/>}/>
                     </Routes>
                     <Footer/>
                 </BrowserRouter>
