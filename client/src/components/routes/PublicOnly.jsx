@@ -1,26 +1,16 @@
 import { Navigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import {useContext, useEffect, useState} from "react";
 import isAuthorized from "../../helpers/isAuthorized";
+import {AuthContext} from "../../context/AuthContext";
 
 const render = (c) => {
     return c;
 }
 
 const PublicOnly = (Component) => {
-    const [hasSession, setHasSession] = useState(false);
+    const [isLoggedIn] = useContext(AuthContext);
 
-    useEffect(() => {
-        (async () => {
-            console.log("Public only route girdi");
-
-            const sessionStatus = await isAuthorized();
-
-            setHasSession(sessionStatus);
-        })();
-    }, []);
-
-
-    return !hasSession ? render(Component) : <Navigate to="/" />;
+    return !isLoggedIn ? render(Component) : <Navigate to="/" />;
 };
 
 export default PublicOnly;
