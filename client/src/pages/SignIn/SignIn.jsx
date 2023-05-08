@@ -27,7 +27,7 @@ const customValidationSchema = Yup.object().shape({
  */
 const SignIn = () => {
     const [currentAlert, setCurrentAlert] = useState(null);
-    const [isLoggedIn, setIsLoggedIn] = useContext(AuthContext);
+    const {setIsLoggedIn} = useContext(AuthContext);
     const navigate = useNavigate();
 
 
