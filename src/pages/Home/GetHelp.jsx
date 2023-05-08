@@ -6,27 +6,25 @@ import SupportIcon from '@mui/icons-material/Support';
 import {SvgIcon} from "@mui/material";
 import {Link} from "react-router-dom";
 
-function GetHelp() {
-    return (
-        <Container
-            component="section"
-            sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', my: 7}}
-        >
-            <Button
-                variant="outlined"
-                size={'large'}
-                to={'/help'}
-                component={Link}
-            >Need help?</Button>
+const GetHelp = () => (
+    <Container
+        component="section"
+        sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', my: 7}}
+    >
+        <Button
+            variant="outlined"
+            size={'large'}
+            to={'/help'}
+            component={Link}
+        >Need help?</Button>
 
-            <Typography variant="subtitle1" sx={{my: 3}}>
-                We are here to help. Get in touch!
-            </Typography>
-            <SvgIcon sx={{fontSize: 81}}>
-                <SupportIcon/>
-            </SvgIcon>
-        </Container>
-    );
-}
+        <Typography variant="subtitle1" sx={{my: 3}}>
+            We are here to help. Get in touch!
+        </Typography>
+        <SvgIcon sx={{fontSize: 81}}>
+            <SupportIcon/>
+        </SvgIcon>
+    </Container>
+);
 
 export default GetHelp;

@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import {dark, light} from './theme'
 import {createTheme, ThemeProvider} from "@mui/material";
 
-function App() {
+const App = () => {
     const [isDarkTheme, setIsDarkTheme] = useState(true);
     const [loggedIn, setLoggedIn] = useState(false);
 
@@ -40,6 +40,6 @@ function App() {
             </ThemeProvider>
         </React.Fragment>
     );
-}
+};
 
 export default App;

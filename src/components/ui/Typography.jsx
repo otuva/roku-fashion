@@ -71,7 +71,7 @@ const variantMapping = {
   subtitle1: 'h3',
 };
 
-function Typography(props) {
+const Typography = props => {
   const { children, variant, marked = 'none', ...other } = props;
 
   let markedClassName = '';
@@ -85,7 +85,7 @@ function Typography(props) {
       {markedClassName ? <span className={markedClassName} /> : null}
     </MuiTypography>
   );
-}
+};
 
 Typography.propTypes = {
   /**
