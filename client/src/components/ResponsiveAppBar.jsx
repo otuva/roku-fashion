@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useState} from 'react';
+import {useContext, useState} from 'react';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -19,6 +19,7 @@ import {DarkMode} from "@mui/icons-material";
 import {Link} from "react-router-dom";
 import RokuButton from "./ui/RokuButton";
 import targetUrlEscape from "../utils/targetUrlEscape";
+import {AuthContext} from "../context/AuthContext";
 
 // const pages = ['Solutions', 'Pricing', 'Blog'];
 const pages = ['Solutions', 'Help', '3D Try-on'];
@@ -49,8 +50,9 @@ const pageToButton = (page) => {
     );
 }
 
-const ResponsiveAppBar = ({isCurrentDarkTheme, onToggleTheme, isCurrentUserLoggedIn, onToggleLoggedIn}) => {
+const ResponsiveAppBar = ({isCurrentDarkTheme, onToggleTheme}) => {
 // const ResponsiveAppBar = () => {
+    const [isLoggedIn] = useContext(AuthContext);
     const theme = useTheme()
 
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -180,7 +182,7 @@ const ResponsiveAppBar = ({isCurrentDarkTheme, onToggleTheme, isCurrentUserLogge
                         >
                             {/*user settings menu*/}
                             {/*{settings.map(arrayItemToLink)}*/}
-                            {isCurrentUserLoggedIn ? userSettings.map(arrayItemToLink) : settings.map(arrayItemToLink)}
+                            {isLoggedIn ? userSettings.map(arrayItemToLink) : settings.map(arrayItemToLink)}
 
                             <MenuItem>
                                 <FormGroup>
