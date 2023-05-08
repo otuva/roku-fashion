@@ -3,7 +3,8 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import {styled} from "@mui/material/styles";
 import ArrowDownward from "@mui/icons-material/ArrowDownward";
-import {Typography, Button} from "@mui/material";
+import {Button} from "@mui/material";
+import Typography from '../../components/ui/Typography';
 
 const backgroundImage =
     'https://unsplash.com/photos/xXJ6utyoSw0/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTd8fGNsb3RoaW5nJTIwZGVzaWduZXJ8ZW58MHx8fHwxNjgzMjg2OTgx&force=true&w=2400';
