@@ -37,11 +37,9 @@ const styles = ({ theme }) => ({
   },
 });
 
-function Transition(props) {
-  return <Slide {...props} direction="down" />;
-}
+const Transition = props => <Slide {...props} direction="down"/>;
 
-function Snackbar(props) {
+const Snackbar = props => {
   const { message, closeFunc, ...other } = props;
   const classes = {
     info: 'MuiSnackbarContent-info',
@@ -73,7 +71,7 @@ function Snackbar(props) {
       {...other}
     />
   );
-}
+};
 
 Snackbar.propTypes = {
   closeFunc: PropTypes.func,

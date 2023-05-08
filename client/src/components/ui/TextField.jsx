@@ -72,7 +72,7 @@ const styles = ({theme}) => ({
     },
 });
 
-function TextField(props) {
+const TextField = props => {
     const {
         InputProps = {},
         InputLabelProps,
@@ -114,7 +114,7 @@ function TextField(props) {
             {...other}
         />
     );
-}
+};
 
 TextField.propTypes = {
     /**

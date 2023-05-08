@@ -12,7 +12,7 @@ const PaperRoot = styled(MuiPaper, {
   }),
 }));
 
-function Paper(props) {
+const Paper = props => {
   const { background, classes, className, padding = false, ...other } = props;
 
   return (
@@ -25,7 +25,7 @@ function Paper(props) {
       {...other}
     />
   );
-}
+};
 
 Paper.propTypes = {
   background: PropTypes.oneOf(['dark', 'light', 'main']).isRequired,

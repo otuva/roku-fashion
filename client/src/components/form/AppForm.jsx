@@ -4,7 +4,7 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Paper from '../ui/Paper';
 
-function AppForm(props) {
+const AppForm = props => {
     const {children} = props;
 
     return (
@@ -22,7 +22,7 @@ function AppForm(props) {
             </Box>
         </Container>
     );
-}
+};
 
 AppForm.propTypes = {
     children: PropTypes.node,
