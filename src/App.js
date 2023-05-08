@@ -3,6 +3,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import React, {useState} from 'react';
 import Home from "./pages/Home";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
+import Footer from "./components/Footer";
 
 function App() {
     const [isDarkTheme, setIsDarkTheme] = useState(true);
@@ -31,6 +32,7 @@ function App() {
                 <Routes>
                     <Route path='/' element={<Home/>}/>
                 </Routes>
+                <Footer/>
             </BrowserRouter>
         </React.Fragment>
     );
