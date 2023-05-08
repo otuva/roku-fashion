@@ -1,14 +1,33 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
-import React from 'react';
+import React, {useState} from 'react';
 import Home from "./pages/Home";
+import ResponsiveAppBar from "./components/ResponsiveAppBar";
 
 function App() {
+    const [isDarkTheme, setIsDarkTheme] = useState(true);
+    const [loggedIn, setLoggedIn] = useState(false);
+
+    const changeTheme = () => {
+        setIsDarkTheme(!isDarkTheme);
+        // updateThemeCookie(isDarkTheme);
+    };
+
+    const changeLoggedIn = () => {
+        setLoggedIn(!loggedIn);
+    }
+
     return (
         <React.Fragment>
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
             <CssBaseline/>
             <BrowserRouter>
+                <ResponsiveAppBar
+                    isCurrentDarkTheme={isDarkTheme}
+                    onToggleTheme={changeTheme}
+                    isCurrentUserLoggedIn={loggedIn}
+                    onToggleLoggedIn={changeLoggedIn}
+                />
                 <Routes>
                     <Route path='/' element={<Home/>}/>
                 </Routes>
