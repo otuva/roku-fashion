@@ -4,7 +4,7 @@ import RokuTypography from './ui/RokuTypography';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import {Box, Grid, Stack, useTheme} from "@mui/material";
+import {Grid, Stack, useTheme} from "@mui/material";
 import RokuButton from "./ui/RokuButton";
 import IconButton from "@mui/material/IconButton";
 import {Link} from 'react-router-dom'
@@ -17,20 +17,6 @@ const Copyright = () => (
         {new Date().getFullYear()}
     </React.Fragment>
 );
-
-const iconStyle = {
-    width: 48,
-    height: 48,
-    display: 'flex',
-    borderRadius: 6,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'secondary.main',
-    mr: 1,
-    '&:hover': {
-        bgcolor: 'secondary.dark',
-    },
-};
 
 /**
  Footer component for the Roku application
