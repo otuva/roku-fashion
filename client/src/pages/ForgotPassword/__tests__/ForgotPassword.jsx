@@ -2,7 +2,7 @@ import React from 'react';
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
-import ForgotPassword from '../index';
+import ForgotPassword from '../ForgotPassword';
 
 describe('ForgotPassword', () => {
 

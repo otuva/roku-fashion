@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom'
-import Privacy from '../index';
+import Privacy from '../Privacy';
 
 describe('Privacy', () => {
     test('renders the page title', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom'
-import Terms from '../index';
+import Terms from '../Terms';
 
 describe('Terms', () => {
     test('renders the page title', () => {
