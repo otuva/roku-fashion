@@ -6,6 +6,9 @@ import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import Footer from "./components/Footer";
 import {dark, light} from './theme'
 import {createTheme, ThemeProvider} from "@mui/material";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import Solutions from "./pages/Solutions";
 
 const App = () => {
     const [isDarkTheme, setIsDarkTheme] = useState(true);
@@ -34,6 +37,9 @@ const App = () => {
                     />
                     <Routes>
                         <Route path='/' element={<Home/>}/>
+                        <Route path='/terms' element={<Terms/>}/>
+                        <Route path='/privacy' element={<Privacy/>}/>
+                        <Route path='/solutions' element={<Solutions/>}/>
                     </Routes>
                     <Footer/>
                 </BrowserRouter>
