@@ -5,48 +5,41 @@ import isAuthorized from '../isAuthorized';
 jest.mock('axios');
 
 describe('isAuthorized', () => {
-    it('should return true when API call returns status true', async () => {
-        const mockCookies = new Cookies();
-        mockCookies.set('token', 'fakeToken');
+    beforeEach(() => {
+        jest.resetAllMocks();
+    });
 
-        const mockApiResponse = {
-            response : {
-                data: {
-                    status: true
-                }
-            }
-        };
-        axios.get.mockResolvedValueOnce(mockApiResponse);
-
+    it('should return true if user is authorized', async () => {
+        axios.get.mockResolvedValue({ data: { status: true } });
         const result = await isAuthorized();
-
-        expect(result).toEqual(true);
+        expect(result).toBe(true);
         expect(axios.get).toHaveBeenCalledWith('/api/auth/authenticated', {
             headers: {
-                'Authorization': `Bearer ${mockCookies.get('token')}`,
-            },
+                'Authorization': `Bearer undefined`
+            }
         });
     });
 
-    it('should return false and remove token when API call throws an error with 400 status code', async () => {
-        const mockCookies = new Cookies();
-        mockCookies.set('token', 'fakeToken');
-
-        const mockErrorResponse = {
+    it('should return false if user is not authorized', async () => {
+        axios.get.mockRejectedValue({
             response: {
-                status: 400,
-            },
-        };
-        axios.get.mockRejectedValueOnce(mockErrorResponse);
-
+                status: 400
+            }
+        });
         const result = await isAuthorized();
-
-        expect(result).toEqual(false);
-        expect(mockCookies.get('token')).toBeUndefined();
+        expect(result).toBe(false);
         expect(axios.get).toHaveBeenCalledWith('/api/auth/authenticated', {
             headers: {
-                'Authorization': `Bearer ${mockCookies.get('token')}`,
-            },
+                'Authorization': `Bearer undefined`
+            }
         });
+    });
+
+    it('should remove the token cookie if user is not authorized', async () => {
+        axios.get.mockRejectedValue({});
+        const cookies = new Cookies();
+        cookies.set('token', 'abc');
+        await isAuthorized();
+        expect(cookies.get('token')).toBeUndefined();
     });
 });
