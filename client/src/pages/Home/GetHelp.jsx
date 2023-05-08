@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
+import RokuButton from '../../components/ui/RokuButton';
 import Container from '@mui/material/Container';
-import Typography from '../../components/ui/Typography';
+import RokuTypography from '../../components/ui/RokuTypography';
 import SupportIcon from '@mui/icons-material/Support';
 import {SvgIcon} from "@mui/material";
 import {Link} from "react-router-dom";
@@ -11,16 +11,16 @@ const GetHelp = () => (
         component="section"
         sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', my: 7}}
     >
-        <Button
+        <RokuButton
             variant="outlined"
             size={'large'}
             to={'/help'}
             component={Link}
-        >Need help?</Button>
+        >Need help?</RokuButton>
 
-        <Typography variant="subtitle1" sx={{my: 3}}>
+        <RokuTypography variant="subtitle1" sx={{my: 3}}>
             We are here to help. Get in touch!
-        </Typography>
+        </RokuTypography>
         <SvgIcon sx={{fontSize: 81}}>
             <SupportIcon/>
         </SvgIcon>

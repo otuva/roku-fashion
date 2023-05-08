@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import ButtonBase from '@mui/material/ButtonBase';
+import ButtonBase from '../../components/ui/RokuButton';
 import Container from '@mui/material/Container';
-import Typography from '../../components/ui/Typography';
+import RokuTypography from '../../components/ui/RokuTypography';
 
 const ImageBackdrop = styled('div')(({ theme }) => ({
   position: 'absolute',
@@ -101,59 +101,58 @@ const images = [
   },
 ];
 
-export default function Categories() {
-  return (
-    <Container component="section" sx={{ mt: 8, mb: 4 }}>
-      <Typography align="center" variant="h2" marked="center">
+const Categories = () => (
+    <Container component="section" sx={{mt: 8, mb: 4}}>
+      <RokuTypography align="center" variant="h2" marked="center">
         For all tastes and all desires
-      </Typography>
-      <Box sx={{ mt: 8, display: 'flex', flexWrap: 'wrap' }}>
+      </RokuTypography>
+      <Box sx={{mt: 8, display: 'flex', flexWrap: 'wrap'}}>
         {images.map((image) => (
-          <ImageIconButton
-            key={image.title}
-            style={{
-              width: image.width,
-            }}
-          >
-            <Box
-              sx={{
-                position: 'absolute',
-                left: 0,
-                right: 0,
-                top: 0,
-                bottom: 0,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center 40%',
-                backgroundImage: `url(${image.url})`,
-              }}
-            />
-            <ImageBackdrop className="imageBackdrop" />
-            <Box
-              sx={{
-                position: 'absolute',
-                left: 0,
-                right: 0,
-                top: 0,
-                bottom: 0,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'common.white',
-              }}
+            <ImageIconButton
+                key={image.title}
+                style={{
+                  width: image.width,
+                }}
             >
-              <Typography
-                component="h3"
-                variant="h6"
-                color="inherit"
-                className="imageTitle"
+              <Box
+                  sx={{
+                    position: 'absolute',
+                    left: 0,
+                    right: 0,
+                    top: 0,
+                    bottom: 0,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center 40%',
+                    backgroundImage: `url(${image.url})`,
+                  }}
+              />
+              <ImageBackdrop className="imageBackdrop"/>
+              <Box
+                  sx={{
+                    position: 'absolute',
+                    left: 0,
+                    right: 0,
+                    top: 0,
+                    bottom: 0,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'common.white',
+                  }}
               >
-                {image.title}
-                <div className="imageMarked" />
-              </Typography>
-            </Box>
-          </ImageIconButton>
+                <RokuTypography
+                    component="h3"
+                    variant="h6"
+                    color="inherit"
+                    className="imageTitle"
+                >
+                  {image.title}
+                  <div className="imageMarked"/>
+                </RokuTypography>
+              </Box>
+            </ImageIconButton>
         ))}
       </Box>
     </Container>
-  );
-}
+);
+export default Categories

@@ -23,6 +23,6 @@ const ButtonRoot = styled(MuiButton)(({ theme, size }) => ({
 }));
 
 // See https://mui.com/guides/typescript/#usage-of-component-prop for why the types uses `C`.
-const Button = props => <ButtonRoot {...props} />;
+const RokuButton = props => <ButtonRoot {...props} />;
 
-export default Button;
+export default RokuButton;

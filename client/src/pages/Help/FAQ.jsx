@@ -4,7 +4,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Container from "@mui/material/Container";
-import Typography from '../../components/ui/Typography';
+import RokuTypography from '../../components/ui/RokuTypography';
 
 const FAQ = () => {
     const [expanded, setExpanded] = React.useState(false);
@@ -18,9 +18,9 @@ const FAQ = () => {
             mt: 10,
             mb: 15
         }}>
-            <Typography align="center" variant="h2" marked="center" sx={{mb: 5}}>
+            <RokuTypography align="center" variant="h2" marked="center" sx={{mb: 5}}>
                 Frequently Asked Questions
-            </Typography>
+            </RokuTypography>
 
             <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                 <AccordionSummary
@@ -28,16 +28,16 @@ const FAQ = () => {
                     aria-controls="panel1bh-content"
                     id="panel1bh-header"
                 >
-                    <Typography sx={{width: '33%', flexShrink: 0}}>
+                    <RokuTypography sx={{width: '33%', flexShrink: 0}}>
                         General settings
-                    </Typography>
-                    <Typography sx={{color: 'text.secondary'}}>I am an accordion</Typography>
+                    </RokuTypography>
+                    <RokuTypography sx={{color: 'text.secondary'}}>I am an accordion</RokuTypography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography>
+                    <RokuTypography>
                         Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
                         Aliquam eget maximus est, id dignissim quam.
-                    </Typography>
+                    </RokuTypography>
                 </AccordionDetails>
             </Accordion>
             <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
@@ -46,17 +46,17 @@ const FAQ = () => {
                     aria-controls="panel2bh-content"
                     id="panel2bh-header"
                 >
-                    <Typography sx={{width: '33%', flexShrink: 0}}>Users</Typography>
-                    <Typography sx={{color: 'text.secondary'}}>
+                    <RokuTypography sx={{width: '33%', flexShrink: 0}}>Users</RokuTypography>
+                    <RokuTypography sx={{color: 'text.secondary'}}>
                         You are currently not an owner
-                    </Typography>
+                    </RokuTypography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography>
+                    <RokuTypography>
                         Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
                         varius pulvinar diam eros in elit. Pellentesque convallis laoreet
                         laoreet.
-                    </Typography>
+                    </RokuTypography>
                 </AccordionDetails>
             </Accordion>
             <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
@@ -65,18 +65,18 @@ const FAQ = () => {
                     aria-controls="panel3bh-content"
                     id="panel3bh-header"
                 >
-                    <Typography sx={{width: '33%', flexShrink: 0}}>
+                    <RokuTypography sx={{width: '33%', flexShrink: 0}}>
                         Advanced settings
-                    </Typography>
-                    <Typography sx={{color: 'text.secondary'}}>
+                    </RokuTypography>
+                    <RokuTypography sx={{color: 'text.secondary'}}>
                         Filtering has been entirely disabled for whole web server
-                    </Typography>
+                    </RokuTypography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography>
+                    <RokuTypography>
                         Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
                         amet egestas eros, vitae egestas augue. Duis vel est augue.
-                    </Typography>
+                    </RokuTypography>
                 </AccordionDetails>
             </Accordion>
             <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
@@ -85,13 +85,13 @@ const FAQ = () => {
                     aria-controls="panel4bh-content"
                     id="panel4bh-header"
                 >
-                    <Typography sx={{width: '33%', flexShrink: 0}}>Personal data</Typography>
+                    <RokuTypography sx={{width: '33%', flexShrink: 0}}>Personal data</RokuTypography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography>
+                    <RokuTypography>
                         Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
                         amet egestas eros, vitae egestas augue. Duis vel est augue.
-                    </Typography>
+                    </RokuTypography>
                 </AccordionDetails>
             </Accordion>
         </Container>

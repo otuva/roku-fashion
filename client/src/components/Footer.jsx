@@ -1,11 +1,11 @@
 import * as React from 'react';
 import Container from '@mui/material/Container';
-import Typography from './ui/Typography';
+import RokuTypography from './ui/RokuTypography';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import {Box, Grid, Stack, useTheme} from "@mui/material";
-import Button from "./ui/Button";
+import RokuButton from "./ui/RokuButton";
 import IconButton from "@mui/material/IconButton";
 import {Link} from 'react-router-dom'
 
@@ -36,7 +36,7 @@ const Footer = () => {
     const theme = useTheme()
 
     return (
-        <Typography
+        <RokuTypography
             component="footer"
             sx={{
                 display: 'flex',
@@ -70,25 +70,25 @@ const Footer = () => {
                         </Grid>
                     </Grid>
                     <Grid item xs>
-                        <Typography align={"center"} marked={"center"} variant={"h6"} my={0.5}>
+                        <RokuTypography align={"center"} marked={"center"} variant={"h6"} my={0.5}>
                             Address
-                        </Typography>
-                        <Typography variant="body1" gutterBottom>
+                        </RokuTypography>
+                        <RokuTypography variant="body1" gutterBottom>
                             308 Negra Arroyo Ln. ABQ New Mexico. 87104
-                        </Typography>
+                        </RokuTypography>
                     </Grid>
                     <Grid item xs>
-                        <Typography align={"center"} marked={"center"} variant={"h6"}>
+                        <RokuTypography align={"center"} marked={"center"} variant={"h6"}>
                             Legal
-                        </Typography>
+                        </RokuTypography>
                         <Stack>
-                            <Button component={Link} to={'/terms'} size={'small'} color="secondary" variant={'text'}>Terms</Button>
-                            <Button component={Link} to={'/privacy'} size={'small'} color="secondary" variant={'text'}>Privacy</Button>
+                            <RokuButton component={Link} to={'/terms'} size={'small'} color="secondary" variant={'text'}>Terms</RokuButton>
+                            <RokuButton component={Link} to={'/privacy'} size={'small'} color="secondary" variant={'text'}>Privacy</RokuButton>
                         </Stack>
                     </Grid>
                 </Grid>
             </Container>
-        </Typography>
+        </RokuTypography>
     );
 }
 export default Footer

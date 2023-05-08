@@ -1,15 +1,15 @@
 import * as React from 'react';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-import Typography from '../../components/ui/Typography';
+import RokuTypography from '../../components/ui/RokuTypography';
 const Privacy = () => (
     <React.Fragment>
         <Container>
             <Box sx={{mt: 7, mb: 12}}>
-                <Typography variant="h3" gutterBottom marked="center" align="center">
+                <RokuTypography variant="h3" gutterBottom marked="center" align="center">
                     Privacy
-                </Typography>
-                <Typography variant="body1" gutterBottom>
+                </RokuTypography>
+                <RokuTypography variant="body1" gutterBottom>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nibh justo, rhoncus vel laoreet
                     eget, porta vel quam. Nunc et pellentesque elit. Vivamus eu tempor est. Cras eu malesuada
                     lectus. Nunc at semper tellus, vitae venenatis sem. Vivamus non gravida dolor. Sed et est in
@@ -18,8 +18,8 @@ const Privacy = () => (
                     mattis. Curabitur in metus in tortor fringilla dignissim. Phasellus volutpat vehicula mi a
                     pretium. Etiam ac bibendum lectus, vitae bibendum neque. Nam tempus lorem lacus, sit amet
                     maximus ex rhoncus vel. Pellentesque et iaculis justo, et pharetra nisi.
-                </Typography>
-                <Typography variant="body1" gutterBottom>
+                </RokuTypography>
+                <RokuTypography variant="body1" gutterBottom>
                     Vivamus fringilla tellus ut metus aliquam, vel rutrum nibh fermentum. Nunc eget nulla aliquam
                     nunc feugiat feugiat eget sit amet neque. Nam dapibus nisi ut eleifend accumsan. Aenean id nunc
                     ac quam lobortis vehicula in nec lacus. Duis et felis tempor, interdum ex quis, condimentum
@@ -27,8 +27,8 @@ const Privacy = () => (
                     mattis ex venenatis. Quisque placerat a nulla id eleifend. In consectetur dui scelerisque,
                     aliquet tortor nec, placerat turpis. Morbi tempor tristique luctus. Ut finibus nulla et diam
                     dignissim, quis porttitor mauris vestibulum.
-                </Typography>
-                <Typography variant="body1" gutterBottom>
+                </RokuTypography>
+                <RokuTypography variant="body1" gutterBottom>
                     Fusce quis faucibus enim, a vestibulum libero. Nulla et nulla eget libero dapibus eleifend eu
                     quis ligula. Sed sit amet sodales purus. Nam aliquet purus nec felis egestas imperdiet.
                     Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
@@ -37,8 +37,8 @@ const Privacy = () => (
                     interdum a magna nec, condimentum tincidunt metus. Aenean euismod neque vehicula sem fermentum,
                     quis tristique diam scelerisque. Nunc hendrerit tincidunt eros, quis finibus sapien lacinia vel.
                     In sit amet turpis et ligula ullamcorper sagittis.
-                </Typography>
-                <Typography variant="body1" gutterBottom>
+                </RokuTypography>
+                <RokuTypography variant="body1" gutterBottom>
                     Morbi non neque in nulla cursus tristique. Vivamus auctor tellus ut eleifend varius. Suspendisse
                     id risus non tellus dignissim tincidunt sit amet ac libero. Morbi feugiat aliquam eros quis
                     ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -49,8 +49,8 @@ const Privacy = () => (
                     bibendum, commodo tellus sit amet, imperdiet elit. Nulla finibus mi sed purus dignissim
                     interdum. Mauris pellentesque mauris vitae purus iaculis, nec sodales ex rhoncus. Fusce nec
                     laoreet tortor.
-                </Typography>
-                <Typography variant="body1" gutterBottom>
+                </RokuTypography>
+                <RokuTypography variant="body1" gutterBottom>
                     Curabitur semper bibendum enim, a finibus diam suscipit vel. Vestibulum id nunc luctus,
                     tincidunt mauris ac, ultrices sapien. Vestibulum ante ipsum primis in faucibus orci luctus et
                     ultrices posuere cubilia curae; Vestibulum vehicula imperdiet volutpat. Cras condimentum
@@ -59,7 +59,7 @@ const Privacy = () => (
                     lacus semper. Quisque bibendum efficitur convallis. Phasellus venenatis sed eros vitae faucibus.
                     Ut gravida egestas urna, scelerisque efficitur lacus lacinia lobortis. Fusce sit amet lobortis
                     justo.
-                </Typography>
+                </RokuTypography>
             </Box>
         </Container>
     </React.Fragment>

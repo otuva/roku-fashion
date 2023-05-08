@@ -71,7 +71,7 @@ const variantMapping = {
   subtitle1: 'h3',
 };
 
-const Typography = props => {
+const RokuTypography = props => {
   const { children, variant, marked = 'none', ...other } = props;
 
   let markedClassName = '';
@@ -87,7 +87,7 @@ const Typography = props => {
   );
 };
 
-Typography.propTypes = {
+RokuTypography.propTypes = {
   /**
    * The content of the component.
    */
@@ -115,4 +115,4 @@ Typography.propTypes = {
   ]),
 };
 
-export default styled(Typography)(styles);
+export default styled(RokuTypography)(styles);

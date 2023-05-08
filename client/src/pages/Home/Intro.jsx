@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import {styled} from "@mui/material/styles";
 import ArrowDownward from "@mui/icons-material/ArrowDownward";
 import {Button} from "@mui/material";
-import Typography from '../../components/ui/Typography';
+import RokuTypography from '../../components/ui/RokuTypography';
 
 const backgroundImage =
     'https://unsplash.com/photos/xXJ6utyoSw0/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTd8fGNsb3RoaW5nJTIwZGVzaWduZXJ8ZW58MHx8fHwxNjgzMjg2OTgx&force=true&w=2400';
@@ -47,17 +47,17 @@ const Intro = () => (
                 src={backgroundImage}
                 alt="increase priority"
             />
-            <Typography align="center" variant="h2" marked="center">
+            <RokuTypography align="center" variant="h2" marked="center">
                 Tailored just for you...
-            </Typography>
-            <Typography
+            </RokuTypography>
+            <RokuTypography
                 align="center"
                 variant="h5"
                 sx={{mb: 4, mt: {xs: 4, sm: 10}}}
             >
                 Skilled team of designers and craftsmen work closely with you
                 to create a garment that fits perfectly and reflects your individuality
-            </Typography>
+            </RokuTypography>
             <Button
                 // component={Link}
                 variant="contained"
@@ -67,9 +67,9 @@ const Intro = () => (
             >
                 Join Now
             </Button>
-            <Typography variant="body2" sx={{mt: 2}}>
+            <RokuTypography variant="body2" sx={{mt: 2}}>
                 Invite only
-            </Typography>
+            </RokuTypography>
 
             <Box
                 sx={{

@@ -1,5 +1,5 @@
 import {SvgIcon} from "@mui/material";
-import Typography from "./Typography";
+import RokuTypography from "./RokuTypography";
 import Box from "@mui/material/Box";
 import * as React from "react";
 
@@ -16,12 +16,12 @@ export const SvgContent = ({svg, title, content}) => {
 			<SvgIcon sx={{fontSize: 81}}>
 				{svg}
 			</SvgIcon>
-			<Typography variant="h6" sx={{my: 5}}>
+			<RokuTypography variant="h6" sx={{my: 5}}>
                 {title}
-			</Typography>
-			<Typography variant="h5">
+			</RokuTypography>
+			<RokuTypography variant="h5">
                 {content}
-			</Typography>
+			</RokuTypography>
 		</Box>
 	)
 }

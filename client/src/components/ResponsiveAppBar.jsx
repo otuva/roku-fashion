@@ -5,7 +5,7 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
+import RokuTypography from "./ui/RokuTypography";
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
@@ -17,7 +17,7 @@ import {ReactComponent as RokuIcon} from "../assets/roku.svg";
 import {FormControlLabel, FormGroup, Switch, useTheme} from "@mui/material";
 import {DarkMode} from "@mui/icons-material";
 import {Link} from "react-router-dom";
-import Button from "./ui/Button";
+import RokuButton from "./ui/RokuButton";
 import targetUrlEscape from "../utils/targetUrlEscape";
 
 // const pages = ['Solutions', 'Pricing', 'Blog'];
@@ -31,21 +31,21 @@ const arrayItemToLink = (page) => {
         <MenuItem key={page}
                   component={Link}
                   to={targetUrlEscape(page)}>
-            <Typography textAlign="center">{page}</Typography>
+            <RokuTypography textAlign="center">{page}</RokuTypography>
         </MenuItem>
     );
 }
 
 const pageToButton = (page) => {
     return (
-        <Button
+        <RokuButton
             key={page}
             component={Link}
             to={targetUrlEscape(page)}
             sx={{my: 2, color: 'white', display: 'block'}}
         >
             {page}
-        </Button>
+        </RokuButton>
     );
 }
 
@@ -80,7 +80,7 @@ const ResponsiveAppBar = ({isCurrentDarkTheme, onToggleTheme, isCurrentUserLogge
                     <SvgIcon sx={{display: {xs: 'none', md: 'flex'}, mr: 1}}>
                         <RokuIcon/>
                     </SvgIcon>
-                    <Typography
+                    <RokuTypography
                         variant="h6"
                         noWrap
                         component={Link}
@@ -96,7 +96,7 @@ const ResponsiveAppBar = ({isCurrentDarkTheme, onToggleTheme, isCurrentUserLogge
                         }}
                     >
                         ROKU
-                    </Typography>
+                    </RokuTypography>
 
                     <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
                         <IconButton
@@ -134,7 +134,7 @@ const ResponsiveAppBar = ({isCurrentDarkTheme, onToggleTheme, isCurrentUserLogge
                     <SvgIcon sx={{display: {xs: 'flex', md: 'none'}, mr: 1}}>
                         <RokuIcon/>
                     </SvgIcon>
-                    <Typography
+                    <RokuTypography
                         variant="h5"
                         noWrap
                         component={Link}
@@ -151,7 +151,7 @@ const ResponsiveAppBar = ({isCurrentDarkTheme, onToggleTheme, isCurrentUserLogge
                         }}
                     >
                         ROKU
-                    </Typography>
+                    </RokuTypography>
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
                         {pages.map(pageToButton)}
                     </Box>
