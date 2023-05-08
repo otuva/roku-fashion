@@ -32,6 +32,10 @@ const iconStyle = {
     },
 };
 
+/**
+ Footer component for the Roku application
+ @return {JSX.Element} Returns the JSX for the footer component
+ */
 const Footer = () => {
     const theme = useTheme()
 

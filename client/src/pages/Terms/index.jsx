@@ -3,6 +3,11 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import RokuTypography from '../../components/ui/RokuTypography';
 
+/**
+ A React component that represents the terms page.
+ @function
+ @returns {JSX.Element} - The rendered component.
+ */
 const Terms = () => {
     return (
         <React.Fragment>

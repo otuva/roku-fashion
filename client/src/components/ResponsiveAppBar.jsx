@@ -50,6 +50,11 @@ const pageToButton = (page) => {
     );
 }
 
+/**
+ Navbar component for the Roku application
+ It is responsive and will display a hamburger menu on smaller screens
+ @return {JSX.Element} Returns the JSX for the navbar component
+ */
 const ResponsiveAppBar = ({isCurrentDarkTheme, onToggleTheme}) => {
 // const ResponsiveAppBar = () => {
     const [isLoggedIn] = useContext(AuthContext);
@@ -58,17 +63,22 @@ const ResponsiveAppBar = ({isCurrentDarkTheme, onToggleTheme}) => {
     const [anchorElNav, setAnchorElNav] = useState(null);
     const [anchorElUser, setAnchorElUser] = useState(null);
 
+    // navigation menu open/close handlers
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
+
+    // user menu open/close handlers
     const handleOpenUserMenu = (event) => {
         setAnchorElUser(event.currentTarget);
     };
 
+    // navigation menu open/close handlers
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
 
+    // user menu open/close handlers
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
@@ -154,10 +164,13 @@ const ResponsiveAppBar = ({isCurrentDarkTheme, onToggleTheme}) => {
                     >
                         ROKU
                     </RokuTypography>
+
+                    {/*pages for navigation*/}
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
                         {pages.map(pageToButton)}
                     </Box>
 
+                    {/*user settings menu*/}
                     <Box sx={{flexGrow: 0}}>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{p: 0}}>

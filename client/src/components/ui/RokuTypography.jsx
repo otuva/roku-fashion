@@ -71,6 +71,13 @@ const variantMapping = {
   subtitle1: 'h3',
 };
 
+/**
+ * Custom typography component for Roku.
+ * @typedef {import('@mui/material/Typography').TypographyProps} Props
+ * @param props
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const RokuTypography = props => {
   const { children, variant, marked = 'none', ...other } = props;
 

@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -22,13 +21,6 @@ import PublicOnly from "./components/routes/PublicOnly";
 const App = () => {
     const [isDarkTheme, setIsDarkTheme] = useState(true);
 
-    // isAuthorized().then((status) => {
-    //     setLoggedIn(status);
-    //     console.log('giris');
-    // });
-
-    // console.log(isThemeCookieDark())
-
     const changeTheme = () => {
         setIsDarkTheme(!isDarkTheme);
         // updateThemeCookie(isDarkTheme);
@@ -47,6 +39,9 @@ const App = () => {
                         onToggleTheme={changeTheme}
                     />
                     <Routes>
+                        {/*all routes resides here.
+                        to protect (require login) an endpoint simply wrap component in Private() function
+                        PublicOnly function is used to avoid weird things like if user accesses sign in page while logged in*/}
                         <Route path='/' element={<Home/>}/>
                         <Route path='/forgot-password' element={<ForgotPassword/>}/>
                         <Route path='/privacy' element={<Privacy/>}/>

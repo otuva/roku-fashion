@@ -6,6 +6,11 @@ import SupportIcon from '@mui/icons-material/Support';
 import {SvgIcon} from "@mui/material";
 import {Link} from "react-router-dom";
 
+/**
+ A React component that only renders a button that links to the help page.
+ @function
+ @returns {JSX.Element} - The rendered component.
+ */
 const GetHelp = () => (
     <Container
         component="section"

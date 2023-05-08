@@ -18,6 +18,12 @@ const number = {
     fontWeight: 'medium',
 };
 
+/**
+ A React component that informs the user how the process works.
+ Uses SvgContent to display the icons.
+ @function
+ @returns {JSX.Element} - The rendered component.
+ */
 const HowItWorks = () => (
     <Box
         component="section"

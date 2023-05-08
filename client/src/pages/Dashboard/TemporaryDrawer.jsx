@@ -48,8 +48,15 @@ const categories = [
   },
 ];
 
+/**
+ A React component that represents the temporary drawer for the dashboard page.
+ @function
+ @returns {JSX.Element} - The rendered component.
+ */
 const TemporaryDrawer = () => {
   const [state, setState] = React.useState(false);
+
+  // The anchor of the drawer. This determines how the drawer will be displayed.
   const anchor = "left";
 
   const toggleDrawer = (open) => (event) => {

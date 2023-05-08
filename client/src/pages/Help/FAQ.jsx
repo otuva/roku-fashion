@@ -6,6 +6,12 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Container from "@mui/material/Container";
 import RokuTypography from '../../components/ui/RokuTypography';
 
+/**
+ A React component that represents the FAQ page.
+ Uses the MUI Accordion component to display the FAQ.
+ @function
+ @returns {JSX.Element} - The rendered component.
+ */
 const FAQ = () => {
     const [expanded, setExpanded] = React.useState(false);
 

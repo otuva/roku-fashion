@@ -15,6 +15,13 @@ const customValidationSchema = Yup.object().shape({
       .required("Email is required")
 })
 
+/**
+
+ A React component that represents the forgot password page.
+ This page is not functional yet because endpoint is not implemented.
+ @function
+ @returns {JSX.Element} - The rendered component.
+ */
 const ForgotPassword = () => {
   const [currentAlert, setCurrentAlert] = useState(null);
 

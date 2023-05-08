@@ -1,5 +1,11 @@
 import Cookies from "universal-cookie";
 
+/**
+ * Returns true if the theme cookie is set to 'dark' or if the theme cookie doesn't exist.
+ * Otherwise, returns false.
+ * Also sets the theme cookie to 'dark' if it doesn't exist.
+ * @returns {boolean}
+ */
 const isThemeCookieDark = () => {
     const cookies = new Cookies();
     const theme = cookies.get('theme');
@@ -12,4 +18,4 @@ const isThemeCookieDark = () => {
 
     return theme === 'dark';
 }
-export default isThemeCookieDark;
+// export default isThemeCookieDark;

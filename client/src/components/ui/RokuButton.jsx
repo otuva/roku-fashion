@@ -23,6 +23,13 @@ const ButtonRoot = styled(MuiButton)(({ theme, size }) => ({
 }));
 
 // See https://mui.com/guides/typescript/#usage-of-component-prop for why the types uses `C`.
+/**
+ * Custom Button component that uses MUI's Button component
+ * @typedef {import('@mui/material/Button').ButtonProps} Props
+ * @param props
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const RokuButton = props => <ButtonRoot {...props} />;
 
 export default RokuButton;

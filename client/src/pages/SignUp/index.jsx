@@ -28,6 +28,12 @@ const customValidationSchema = Yup.object().shape({
     ),
 })
 
+/**
+ A React component that represents the sign up page.
+ Uses MUI alert component to display error messages.
+ @function
+ @returns {JSX.Element} - The rendered component.
+ */
 const SignUp = () => {
     const [currentAlert, setCurrentAlert] = useState(null);
 

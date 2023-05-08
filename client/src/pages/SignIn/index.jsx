@@ -19,6 +19,12 @@ const customValidationSchema = Yup.object().shape({
         .required("Password is required"),
 })
 
+/**
+ A React component that represents the sign in page.
+ Uses MUI alert component to display error messages.
+ @function
+ @returns {JSX.Element} - The rendered component.
+ */
 const SignIn = () => {
     const [currentAlert, setCurrentAlert] = useState(null);
     const [setIsLoggedIn] = useContext(AuthContext);

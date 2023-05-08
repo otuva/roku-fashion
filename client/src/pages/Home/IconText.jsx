@@ -8,6 +8,12 @@ import {ReactComponent as SewingNeedle} from '../../assets/sewing-needle.svg';
 import {ReactComponent as MeasureTape} from '../../assets/measure-tape.svg';
 import {SvgContent} from "../../components/ui/SvgContent";
 
+/**
+ A React component that displays three icons with text.
+ Uses SvgContent to display the icons.
+ @function
+ @returns {JSX.Element} - The rendered component.
+ */
 const IconText = () => (
     <Box
         component="section"

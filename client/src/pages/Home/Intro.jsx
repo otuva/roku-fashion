@@ -33,6 +33,12 @@ const IntroRoot = styled('section')(({theme}) => ({
     }
 }));
 
+/**
+ A React component that welcomes the user to the website.
+ Uses backgroundImage url to display the background image.
+ @function
+ @returns {JSX.Element} - The rendered component.
+ */
 const Intro = () => {
     return (
         <IntroRoot>

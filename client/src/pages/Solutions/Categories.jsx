@@ -101,6 +101,13 @@ const images = [
   },
 ];
 
+/**
+ A React component that uses MUI grid component to display the categories of the website.
+ Includes a title and a grid of images.
+ Total of 9 images.
+ @function
+ @returns {JSX.Element} - The rendered component.
+ */
 const Categories = () => (
     <Container component="section" sx={{mt: 8, mb: 4}}>
       <RokuTypography align="center" variant="h2" marked="center">

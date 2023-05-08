@@ -12,6 +12,11 @@ import SearchIcon from '@mui/icons-material/Search';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import Container from "@mui/material/Container";
 
+/**
+ A React component that represents the content of the admin dashboard page.
+ @function
+ @returns {JSX.Element} - The rendered component.
+ */
 const Content = () => (
     <Container sx={{my: 12, mb: 36}}>
         <RokuTypography align="center" variant="h2" marked="center" sx={{mb: 24}}>

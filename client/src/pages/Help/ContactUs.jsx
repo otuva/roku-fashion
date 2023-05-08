@@ -7,6 +7,12 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import BusinessIcon from '@mui/icons-material/Business';
 import RokuButton from "../../components/ui/RokuButton";
 
+/**
+ A React component that represents the contact us page.
+ Includes the contact information for the Roku team.
+ @function
+ @returns {JSX.Element} - The rendered component.
+ */
 const ContactUs = () => {
     return (
         <Container align="center" sx={{
