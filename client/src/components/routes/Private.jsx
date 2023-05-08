@@ -1,6 +1,5 @@
-import { Navigate } from "react-router-dom";
-import {useContext, useEffect, useState} from "react";
-import isAuthorized from "../../helpers/isAuthorized";
+import {Navigate} from "react-router-dom";
+import {useContext} from "react";
 import {AuthContext} from "../../context/AuthContext";
 
 
@@ -12,7 +11,7 @@ import {AuthContext} from "../../context/AuthContext";
 const Private = (Component) => {
     const [isLoggedIn] = useContext(AuthContext);
 
-    return isLoggedIn ? Component : <Navigate to="/sign-in" />;
+    return isLoggedIn ? Component : <Navigate to="/sign-in"/>;
 };
 
 export default Private;
