@@ -2,7 +2,7 @@
 const mongoose = require("mongoose");
 require('dotenv').config()
 
-async function dbConnect() {
+const dbConnect = async () => {
   // use mongoose to connect this app to our database on mongoDB using the DB_URL (connection string)
   mongoose
     .connect(
@@ -20,6 +20,6 @@ async function dbConnect() {
       console.log("Unable to connect to MongoDB Atlas!");
       console.error(error);
     });
-}
+};
 
 module.exports = dbConnect;
