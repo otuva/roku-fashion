@@ -27,18 +27,21 @@ const customValidationSchema = Yup.object().shape({
  */
 const SignIn = () => {
     const [currentAlert, setCurrentAlert] = useState(null);
-    const [setIsLoggedIn] = useContext(AuthContext);
+    const [isLoggedIn, setIsLoggedIn] = useContext(AuthContext);
     const navigate = useNavigate();
 
+
+    // function to handle form submission
     const handleOnSubmit = async (values) => {
         axios.post('/api/auth/login', {...values})
             .then((resp) => {
-                // const message = resp.data.message
                 const cookies = new Cookies();
                 cookies.set('token', resp.data.token, {path: '/'});
-                setIsLoggedIn(true);
                 setCurrentAlert({severity: 'success', message: resp.data.message + ' Redirecting... (setTimeout 1k)'});
-                setTimeout(() => {navigate('/')}, 1000);
+                setIsLoggedIn(true);
+                setTimeout(() => {
+                    navigate('/')
+                }, 1000);
             })
             .catch((err) => {
                 const resp = err.response
@@ -114,7 +117,7 @@ const SignIn = () => {
                             </Button>
 
                             <Button
-                                sx={{my:3}}
+                                sx={{my: 3}}
                                 color="primary"
                                 disabled={isSubmitting}
                                 fullWidth

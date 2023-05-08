@@ -1,7 +1,7 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import Home from "./pages/Home/Home";
 import {dark, light} from './theme'
 import Privacy from "./pages/Privacy/Privacy";
@@ -15,8 +15,8 @@ import Help from "./pages/Help/Help";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import Private from "./components/routes/Private";
-import isAuthorized from "./helpers/isAuthorized";
 import PublicOnly from "./components/routes/PublicOnly";
+import Logout from "./pages/Logout/Logout";
 
 const App = () => {
     const [isDarkTheme, setIsDarkTheme] = useState(true);
@@ -51,6 +51,7 @@ const App = () => {
                         <Route path='/solutions' element={<Solutions/>}/>
                         <Route path='/help' element={<Help/>}/>
                         <Route path='/dashboard' element={Private(<Dashboard/>)}/>
+                        <Route path='/logout' element={<Logout/>}/>
                     </Routes>
                     <Footer/>
                 </BrowserRouter>
