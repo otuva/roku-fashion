@@ -19,19 +19,17 @@
 
 [//]: # (- sign in redirection kirik gibi duzelt.)
 
-- tema cookie kullan
+[//]: # (- tema cookie kullan)
 
-- export constlari export default yap
-
-- ci/cd
+- export constlari export default yap? kod uyumlulugu
 
 [//]: # (- hrefleri router linkle degis)
 
-- degistirelbilir 3d render goster
+[//]: # (- degistirelbilir 3d render goster)
 
 [//]: # (- xs copyright kirik)
 
-- dil secenegi ekle sol sticky
+- dil secenegi ekle sol sticky? cok gerekli degil
 
 [//]: # (- signup signin renderlamasin giris yapmissa)
 
