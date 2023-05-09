@@ -22,7 +22,7 @@ import targetUrlEscape from "../utils/targetUrlEscape";
 import {AuthContext} from "../context/AuthContext";
 
 // const pages = ['Solutions', 'Pricing', 'Blog'];
-const pages = ['Solutions', 'Help', '3D Try-on'];
+const pages = ['Solutions', 'Help', 'Try-on 3D'];
 // const settings = ['Sign Up', 'Sign In', 'Dashboard', 'Logout'];
 const settings = ['Sign Up', 'Sign In'];
 const userSettings = ['Dashboard', 'Logout'];
