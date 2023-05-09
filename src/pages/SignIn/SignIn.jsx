@@ -1,6 +1,7 @@
 import React, {useContext, useState} from 'react';
-import {Alert, Box, Button, TextField,} from "@mui/material";
+import {Alert, Box, TextField,} from "@mui/material";
 import RokuTypography from '../../components/ui/RokuTypography';
+import RokuButton from '../../components/ui/RokuButton';
 import AppForm from '../../components/form/AppForm';
 import {Link, useNavigate} from "react-router-dom";
 import * as Yup from "yup";
@@ -56,11 +57,11 @@ const SignIn = () => {
                     <RokuTypography variant="h3" gutterBottom marked="center">
                         Sign In
                     </RokuTypography>
-                    <Button component={Link}
+                    <RokuButton component={Link}
                             to={'/sign-up'}
                             size={'small'}
                             color="secondary"
-                            variant={'text'}>Not a member yet?</Button>
+                            variant={'text'}>Not a member yet?</RokuButton>
                 </Box>
                 <Formik
                     initialValues={{
@@ -107,16 +108,16 @@ const SignIn = () => {
                                 value={values.password}
                                 variant="outlined"
                             />
-                            <Button component={Link}
+                            <RokuButton component={Link}
                                     to={'/forgot-password'}
                                     size={'small'}
                                     color="secondary"
                                     variant={'text'}
                             >
                                 Forgot password?
-                            </Button>
+                            </RokuButton>
 
-                            <Button
+                            <RokuButton
                                 sx={{my: 3}}
                                 color="primary"
                                 disabled={isSubmitting}
@@ -126,7 +127,7 @@ const SignIn = () => {
                                 variant="contained"
                             >
                                 Sign in
-                            </Button>
+                            </RokuButton>
 
                             {
                                 currentAlert && (

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import {Alert, Box, Button, Checkbox, FormHelperText, TextField,} from "@mui/material";
+import {Alert, Box, Checkbox, FormHelperText, TextField,} from "@mui/material";
 import RokuTypography from '../../components/ui/RokuTypography';
+import RokuButton from '../../components/ui/RokuButton';
 import AppForm from '../../components/form/AppForm';
 import {Link} from "react-router-dom";
 import * as Yup from "yup";
@@ -60,11 +61,11 @@ const SignUp = () => {
                     <RokuTypography variant="h3" gutterBottom marked="center">
                         Sign Up
                     </RokuTypography>
-                    <Button component={Link}
+                    <RokuButton component={Link}
                             to={'/sign-in'}
                             size={'small'}
                             color="secondary"
-                            variant={'text'}>Already have an account?</Button>
+                            variant={'text'}>Already have an account?</RokuButton>
                 </Box>
 
                 <Formik
@@ -153,20 +154,20 @@ const SignUp = () => {
                                     name="policy"
                                     onChange={handleChange}
                                 />
-                                <Button component={Link}
+                                <RokuButton component={Link}
                                         to={'/terms'}
                                         size={'small'}
                                         color="secondary"
                                         variant={'text'}
                                 >
                                     I have read the Terms
-                                </Button>
+                                </RokuButton>
                             </Box>
                             {Boolean(touched.policy && errors.policy) && (
                                 <FormHelperText error>{errors.policy}</FormHelperText>
                             )}
 
-                            <Button
+                            <RokuButton
                                 sx={{my: 3}}
                                 color="primary"
                                 disabled={isSubmitting}
@@ -176,7 +177,7 @@ const SignUp = () => {
                                 variant="contained"
                             >
                                 Sign up
-                            </Button>
+                            </RokuButton>
 
                             {
                                 currentAlert && (

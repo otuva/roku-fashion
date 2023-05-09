@@ -3,8 +3,8 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import {styled} from "@mui/material/styles";
 import ArrowDownward from "@mui/icons-material/ArrowDownward";
-import {Button} from "@mui/material";
 import RokuTypography from '../../components/ui/RokuTypography';
+import RokuButton from '../../components/ui/RokuButton';
 import {Link} from "react-router-dom";
 
 const backgroundImage =
@@ -66,7 +66,7 @@ const Intro = () => {
                     Skilled team of designers and craftsmen work closely with you
                     to create a garment that fits perfectly and reflects your individuality
                 </RokuTypography>
-                <Button
+                <RokuButton
                     component={Link}
                     variant="contained"
                     size="large"
@@ -74,7 +74,7 @@ const Intro = () => {
                     sx={{minWidth: 200}}
                 >
                     Join Now
-                </Button>
+                </RokuButton>
                 <RokuTypography variant="body2" sx={{mt: 2}}>
                     Invite only
                 </RokuTypography>

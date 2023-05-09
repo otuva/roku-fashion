@@ -1,8 +1,9 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import RokuTypography from '../../components/ui/RokuTypography';
+import RokuButton from '../../components/ui/RokuButton';
 import AppForm from '../../components/form/AppForm';
-import {Alert, Button, TextField} from "@mui/material";
+import {Alert, TextField} from "@mui/material";
 import {Formik} from "formik";
 import * as Yup from "yup";
 import {useState} from "react";
@@ -81,7 +82,7 @@ const ForgotPassword = () => {
                       variant="outlined"
                   />
 
-                  <Button
+                  <RokuButton
                       sx={{my:3}}
                       color="primary"
                       disabled={isSubmitting}
@@ -91,7 +92,7 @@ const ForgotPassword = () => {
                       variant="contained"
                   >
                     Reset
-                  </Button>
+                  </RokuButton>
 
                   {
                       currentAlert && (
