@@ -24,7 +24,7 @@ export const AuthContextProvider = ({ children }) => {
     // this hook will check if the token is valid or not
     useEffect(() => {
         (async () => {
-            console.log("ProtectedRoute girdi");
+            // console.log("ProtectedRoute girdi");
 
             const sessionStatus = await isAuthorized();
 
