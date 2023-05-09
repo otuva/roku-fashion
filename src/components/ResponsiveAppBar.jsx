@@ -27,6 +27,12 @@ const pages = ['Solutions', 'Help', 'Try-on 3D'];
 const settings = ['Sign Up', 'Sign In'];
 const userSettings = ['Dashboard', 'Logout'];
 
+/**
+ Converts an array item to a menu link for the Roku navbar
+ @param {string} page - the name of the page to link to
+ @param {Function} handleClose - function to close the menu after selecting an item
+ @return {JSX.Element} The JSX element for the menu item
+ */
 const arrayItemToLink = (page, handleClose) => {
     return (
         <MenuItem key={page}
@@ -38,6 +44,11 @@ const arrayItemToLink = (page, handleClose) => {
     );
 }
 
+/**
+ Converts a page name to a button for the Roku navbar
+ @param {string} page - the name of the page to link to
+ @return {JSX.Element} The JSX element for the button
+ */
 const pageToButton = (page) => {
     return (
         <RokuButton
@@ -54,6 +65,8 @@ const pageToButton = (page) => {
 /**
  Navbar component for the Roku application
  It is responsive and will display a hamburger menu on smaller screens
+ @param {boolean} isCurrentDarkTheme - variable supplied by app for the current theme
+ @param {Function} onToggleTheme - function supplied by app to toggle the theme
  @return {JSX.Element} Returns the JSX for the navbar component
  */
 const ResponsiveAppBar = ({isCurrentDarkTheme, onToggleTheme}) => {
@@ -93,6 +106,8 @@ const ResponsiveAppBar = ({isCurrentDarkTheme, onToggleTheme}) => {
                     <SvgIcon sx={{display: {xs: 'none', md: 'flex'}, mr: 1}}>
                         <RokuIcon/>
                     </SvgIcon>
+
+                    {/*logo for the app*/}
                     <RokuTypography
                         variant="h6"
                         noWrap
@@ -111,6 +126,7 @@ const ResponsiveAppBar = ({isCurrentDarkTheme, onToggleTheme}) => {
                         ROKU
                     </RokuTypography>
 
+                    {/*menu for the navigation pages. in small screens. will be kebab */}
                     <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
                         <IconButton
                             size="large"
@@ -144,6 +160,9 @@ const ResponsiveAppBar = ({isCurrentDarkTheme, onToggleTheme}) => {
                             {pages.map(page => arrayItemToLink(page, handleCloseNavMenu))}
                         </Menu>
                     </Box>
+
+
+                    {/*logo for the small screens. makes icon and logo centered*/}
                     <SvgIcon sx={{display: {xs: 'flex', md: 'none'}, mr: 1}}>
                         <RokuIcon/>
                     </SvgIcon>
@@ -214,4 +233,5 @@ const ResponsiveAppBar = ({isCurrentDarkTheme, onToggleTheme}) => {
         </AppBar>
     );
 };
+
 export default ResponsiveAppBar;
