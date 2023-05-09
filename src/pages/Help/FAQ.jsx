@@ -6,6 +6,29 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Container from "@mui/material/Container";
 import RokuTypography from '../../components/ui/RokuTypography';
 
+const qa = [
+    {
+        id: "panel1",
+        heading: "What is bespoke fashion?",
+        details: "Bespoke fashion refers to custom-made clothing that is tailored to fit an individual's specific measurements and preferences. Unlike ready-to-wear clothing, which is mass-produced and available in standard sizes, bespoke clothing is designed and constructed to the customer's unique specifications."
+    },
+    {
+        id: "panel2",
+        heading: "What is the difference between bespoke and ready-to-wear clothing?",
+        details: " The main difference between bespoke and ready-to-wear clothing is that bespoke clothing is made to measure for the individual customer, while ready-to-wear clothing is produced in standard sizes and may require alterations to fit properly. Bespoke clothing is typically of higher quality and made with more attention to detail than ready-to-wear clothing."
+    },
+    {
+        id: "panel3",
+        heading: "How does the bespoke process work?",
+        details: "The bespoke process typically involves an initial consultation with a tailor to discuss the customer's measurements, style preferences, and other details. The tailor then creates a pattern based on the customer's specifications and creates a prototype garment for fitting. The garment is then adjusted and refined until the desired fit and style is achieved."
+    },
+    {
+        id: "panel4",
+        heading: "What fabrics do you offer for bespoke clothing?",
+        details: "We offer a wide range of high-quality fabrics for bespoke clothing, including wool, cotton, silk, and linen, as well as blends and specialty fabrics for specific purposes such as outdoor wear."
+    }
+];
+
 /**
  A React component that represents the FAQ page.
  Uses the MUI Accordion component to display the FAQ.
@@ -15,7 +38,7 @@ import RokuTypography from '../../components/ui/RokuTypography';
 const FAQ = () => {
     const [expanded, setExpanded] = React.useState(false);
 
-    const handleChange = (panel) => (event, isExpanded) => {
+    const handleChange = panel => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
     };
 
@@ -24,82 +47,31 @@ const FAQ = () => {
             mt: 10,
             mb: 15
         }}>
-            <RokuTypography align="center" variant="h2" marked="center" sx={{mb: 5}}>
+            <RokuTypography align="center" variant="h2" marked="center" sx={{mb: 12}}>
                 Frequently Asked Questions
             </RokuTypography>
 
-            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                <AccordionSummary
-                    expandIcon={<ExpandMoreIcon/>}
-                    aria-controls="panel1bh-content"
-                    id="panel1bh-header"
-                >
-                    <RokuTypography sx={{width: '33%', flexShrink: 0}}>
-                        General settings
-                    </RokuTypography>
-                    <RokuTypography sx={{color: 'text.secondary'}}>I am an accordion</RokuTypography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <RokuTypography>
-                        Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
-                        Aliquam eget maximus est, id dignissim quam.
-                    </RokuTypography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-                <AccordionSummary
-                    expandIcon={<ExpandMoreIcon/>}
-                    aria-controls="panel2bh-content"
-                    id="panel2bh-header"
-                >
-                    <RokuTypography sx={{width: '33%', flexShrink: 0}}>Users</RokuTypography>
-                    <RokuTypography sx={{color: 'text.secondary'}}>
-                        You are currently not an owner
-                    </RokuTypography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <RokuTypography>
-                        Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
-                        varius pulvinar diam eros in elit. Pellentesque convallis laoreet
-                        laoreet.
-                    </RokuTypography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-                <AccordionSummary
-                    expandIcon={<ExpandMoreIcon/>}
-                    aria-controls="panel3bh-content"
-                    id="panel3bh-header"
-                >
-                    <RokuTypography sx={{width: '33%', flexShrink: 0}}>
-                        Advanced settings
-                    </RokuTypography>
-                    <RokuTypography sx={{color: 'text.secondary'}}>
-                        Filtering has been entirely disabled for whole web server
-                    </RokuTypography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <RokuTypography>
-                        Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
-                        amet egestas eros, vitae egestas augue. Duis vel est augue.
-                    </RokuTypography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
-                <AccordionSummary
-                    expandIcon={<ExpandMoreIcon/>}
-                    aria-controls="panel4bh-content"
-                    id="panel4bh-header"
-                >
-                    <RokuTypography sx={{width: '33%', flexShrink: 0}}>Personal data</RokuTypography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <RokuTypography>
-                        Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
-                        amet egestas eros, vitae egestas augue. Duis vel est augue.
-                    </RokuTypography>
-                </AccordionDetails>
-            </Accordion>
+            {qa.map(accordion => {
+                const {id, heading, details} = accordion;
+                return (
+                    <Accordion
+                        expanded={expanded === id}
+                        key={id}
+                        onChange={handleChange(id)}
+                    >
+                        <AccordionSummary
+                            expandIcon={<ExpandMoreIcon/>}
+                            aria-controls="panel1bh-content"
+                            id="panel1bh-header"
+                        >
+                            <RokuTypography className={heading}>{heading}</RokuTypography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <RokuTypography>{details}</RokuTypography>
+                        </AccordionDetails>
+                    </Accordion>
+                );
+            })}
         </Container>
     );
 };
