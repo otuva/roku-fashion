@@ -22,13 +22,15 @@ const ContactUs = () => {
                 Contact Us
             </RokuTypography>
 
-            <Grid container rowSpacing={1} columnSpacing={{xs: 1, sm: 2, md: 3}}>
-                <Grid item xs={6}>
+            <Grid container spacing={6}>
+
+                {/*2 rows first two on first, second on second*/}
+                <Grid item xs={12} sm={6}>
                     <RokuButton href={'mailto:info@example.com'} variant="outlined" startIcon={<EmailIcon/>}>
                         info@example.com
                     </RokuButton>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <RokuButton href={'tel:+1000000000'} variant="outlined" startIcon={<PhoneIcon/>}>
                         +1 000 000 000
                     </RokuButton>
@@ -40,7 +42,6 @@ const ContactUs = () => {
                     </RokuButton>
                 </Grid>
             </Grid>
-
         </Container>
     )
 }
