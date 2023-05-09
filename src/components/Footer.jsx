@@ -9,6 +9,10 @@ import RokuButton from "./ui/RokuButton";
 import IconButton from "@mui/material/IconButton";
 import {Link} from 'react-router-dom'
 
+/**
+ * Aesthetic component for the Roku footer. Copyleft
+ * @returns {JSX.Element}
+ */
 const Copyright = () => (
     <RokuTypography variant={'caption'}>
         {'© '}
@@ -30,7 +34,7 @@ const Footer = () => {
             component="footer"
             sx={{
                 display: 'flex',
-                color: theme.palette.common.white,
+                color: theme.palette.common.white, // conguent with the AppBar
                 bgcolor: theme.palette.primary.main
             }}
         >
@@ -42,6 +46,8 @@ const Footer = () => {
                               direction="column"
                               justifyContent="flex-end"
                               spacing={2}>
+
+                            {/*social buttons*/}
                             <Grid item xs>
                                 <IconButton color="secondary" aria-label="FacebookIcon">
                                     <FacebookIcon/>
@@ -53,6 +59,7 @@ const Footer = () => {
                                     <InstagramIcon/>
                                 </IconButton>
                             </Grid>
+                            {/*copyright*/}
                             <Grid item xs>
                                 <Copyright/>
                             </Grid>
