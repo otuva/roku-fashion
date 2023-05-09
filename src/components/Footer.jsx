@@ -10,12 +10,12 @@ import IconButton from "@mui/material/IconButton";
 import {Link} from 'react-router-dom'
 
 const Copyright = () => (
-    <React.Fragment>
+    <RokuTypography variant={'caption'}>
         {'© '}
         Roku
         {' '}
         {new Date().getFullYear()}
-    </React.Fragment>
+    </RokuTypography>
 );
 
 /**
@@ -41,8 +41,7 @@ const Footer = () => {
                         <Grid container
                               direction="column"
                               justifyContent="flex-end"
-                              spacing={2}
-                              sx={{height: 120}}>
+                              spacing={2}>
                             <Grid item xs>
                                 <IconButton color="secondary" aria-label="FacebookIcon">
                                     <FacebookIcon/>
@@ -59,6 +58,7 @@ const Footer = () => {
                             </Grid>
                         </Grid>
                     </Grid>
+                    {/*''address'*/}
                     <Grid item xs>
                         <RokuTypography align={"center"} marked={"center"} variant={"h6"} my={0.5}>
                             Address
@@ -67,6 +67,7 @@ const Footer = () => {
                             308 Negra Arroyo Ln. ABQ New Mexico. 87104
                         </RokuTypography>
                     </Grid>
+                    {/*legality pages*/}
                     <Grid item xs>
                         <RokuTypography align={"center"} marked={"center"} variant={"h6"}>
                             Legal
