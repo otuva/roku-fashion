@@ -17,6 +17,7 @@ import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import Private from "./components/routes/Private";
 import PublicOnly from "./components/routes/PublicOnly";
 import Logout from "./pages/Logout/Logout";
+import TryOn3D from "./pages/TryOn3D/TryOn3D";
 
 const App = () => {
     const [isDarkTheme, setIsDarkTheme] = useState(true);
@@ -52,6 +53,7 @@ const App = () => {
                         <Route path='/help' element={<Help/>}/>
                         <Route path='/dashboard' element={Private(<Dashboard/>)}/>
                         <Route path='/logout' element={<Logout/>}/>
+                        <Route path='/try-on-3d' element={<TryOn3D/>}/>
                     </Routes>
                     <Footer/>
                 </BrowserRouter>
