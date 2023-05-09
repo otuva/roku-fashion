@@ -1,3 +1,25 @@
+# R o k u
+
+PoC for a bespoke fashion webapp.
+
+Made with React, Material UI, Three.js, and MongoDB (Atlas).
+
+Features:
+
+- functional signup/signin
+- form verification
+- dark mode toggle with cookie persistence
+- 3d model rendering
+- responsive design
+- (nonfunctional) admin dashboard
+- temporary drawer
+- private endpoints for react router (jwt verification with api)
+- responsive appbar 
+- footer with social media icons
+- server side verification of jwt
+- express api server
+- structured for hosting on vercel
+
 # Images (all cc) from:
 
 - Icons: https://game-icons.net/
