@@ -21,9 +21,9 @@ describe('ControlledAccordions', () => {
                 <FAQ />
             </MemoryRouter>
         );
-        const generalSettingsAccordion = screen.getByRole('button', { name: /general settings/i });
+        const generalSettingsAccordion = screen.getByRole('button', { name: /what is bespoke fashion/i });
         fireEvent.click(generalSettingsAccordion);
-        expect(screen.getByText(/Nulla facilisi/i)).toBeInTheDocument();
+        expect(screen.getByText(/Bespoke fashion refers to custom-made clothing/i)).toBeInTheDocument();
     });
 
     it('Accordion headers are displayed correctly', () => {
@@ -32,9 +32,9 @@ describe('ControlledAccordions', () => {
                 <FAQ />
             </MemoryRouter>
         );
-        expect(screen.getByRole('button', { name: /general settings/i })).toBeInTheDocument();
-        expect(screen.getByRole('button', { name: /users/i })).toBeInTheDocument();
-        expect(screen.getByRole('button', { name: /advanced settings/i })).toBeInTheDocument();
-        expect(screen.getByRole('button', { name: /personal data/i })).toBeInTheDocument();
+        expect(screen.getByRole('button', { name: /What is bespoke fashion/i })).toBeInTheDocument();
+        expect(screen.getByRole('button', { name: /What is the difference between bespoke/i })).toBeInTheDocument();
+        expect(screen.getByRole('button', { name: /How does the bespoke process work/i })).toBeInTheDocument();
+        expect(screen.getByRole('button', { name: /What fabrics do you offer/i })).toBeInTheDocument();
     });
 });
