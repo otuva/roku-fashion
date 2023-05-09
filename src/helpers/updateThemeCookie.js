@@ -9,4 +9,4 @@ const updateThemeCookie = (isDarkTheme) => {
     cookies.set('theme', isDarkTheme ? 'dark' : 'light', { path: '/' });
 }
 
-// export default updateThemeCookie;
+export default updateThemeCookie;

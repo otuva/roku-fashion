@@ -1,7 +1,7 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Home from "./pages/Home/Home";
 import {dark, light} from './theme'
 import Privacy from "./pages/Privacy/Privacy";
@@ -18,14 +18,25 @@ import Private from "./components/routes/Private";
 import PublicOnly from "./components/routes/PublicOnly";
 import Logout from "./pages/Logout/Logout";
 import TryOn3D from "./pages/TryOn3D/TryOn3D";
+import isThemeCookieDark from "./helpers/isThemeCookieDark";
+import updateThemeCookie from "./helpers/updateThemeCookie";
 
 const App = () => {
     const [isDarkTheme, setIsDarkTheme] = useState(true);
 
     const changeTheme = () => {
         setIsDarkTheme(!isDarkTheme);
-        // updateThemeCookie(isDarkTheme);
+        updateThemeCookie(!isDarkTheme);
+        // console.log("cookie degisti")
     };
+
+    // read them cookie after render
+    useEffect(() => {
+        (() => {
+            // console.log("cookie okudu")
+            setIsDarkTheme(isThemeCookieDark());
+        })();
+    }, []);
 
     return (
         <React.Fragment>

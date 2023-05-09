@@ -18,4 +18,4 @@ const isThemeCookieDark = () => {
 
     return theme === 'dark';
 }
-// export default isThemeCookieDark;
+export default isThemeCookieDark;
