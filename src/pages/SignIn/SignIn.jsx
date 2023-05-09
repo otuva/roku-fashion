@@ -27,7 +27,7 @@ const customValidationSchema = Yup.object().shape({
  */
 const SignIn = () => {
     const [currentAlert, setCurrentAlert] = useState(null);
-    const {setIsLoggedIn} = useContext(AuthContext);
+    const [isLoggedIn, setIsLoggedIn] = useContext(AuthContext);
     const navigate = useNavigate();
 
 
@@ -37,7 +37,7 @@ const SignIn = () => {
             .then((resp) => {
                 const cookies = new Cookies();
                 cookies.set('token', resp.data.token, {path: '/'});
-                setCurrentAlert({severity: 'success', message: resp.data.message + ' Redirecting... (setTimeout 1k)'});
+                setCurrentAlert({severity: 'success', message: resp.data.message + ' Redirecting... (setTimeout 1k) prevLoggedIn:' + isLoggedIn});
                 setIsLoggedIn(true);
                 setTimeout(() => {
                     navigate('/')
