@@ -13,9 +13,21 @@
 
 # TODO:
 
+[//]: # (- faq text degis)
+
+[//]: # (- sign in redirection kirik gibi duzelt.)
+
+- tema cookie kullan
+
+- export constlari export default yap
+
+- ci/cd
+
 [//]: # (- hrefleri router linkle degis)
 
-- 3d render goster
+- degistirelbilir 3d render goster
+
+- dil secenegi ekle sol sticky
 
 [//]: # (- signup signin renderlamasin giris yapmissa)
 
