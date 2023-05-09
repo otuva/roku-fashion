@@ -6,25 +6,25 @@ import Intro from '../Intro';
 describe('Intro component', () => {
 
     beforeEach(() => {
-        render(<Intro />, {wrapper: MemoryRouter});
+        render(<Intro/>, {wrapper: MemoryRouter});
     })
 
-    test('renders the heading', () => {
+    it('renders the heading', () => {
         const headingElement = screen.getByText(/Tailored just for you/i);
         expect(headingElement).toBeInTheDocument();
     });
 
-    test('renders the description', () => {
+    it('renders the description', () => {
         const descriptionElement = screen.getByText(/Skilled team of designers/i);
         expect(descriptionElement).toBeInTheDocument();
     });
 
-    test('renders the "Join Now" button', () => {
+    it('renders the "Join Now" button', () => {
         const buttonElement = screen.getByRole('link', {name: /Join Now/i});
         expect(buttonElement).toBeInTheDocument();
     });
 
-    test('renders the background image', () => {
+    it('renders the background image', () => {
         const imageElement = screen.getByAltText(/increase priority/i);
         expect(imageElement).toBeInTheDocument();
     });
