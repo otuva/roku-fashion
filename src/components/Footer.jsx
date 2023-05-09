@@ -60,10 +60,10 @@ const Footer = () => {
                     </Grid>
                     {/*''address'*/}
                     <Grid item xs>
-                        <RokuTypography align={"center"} marked={"center"} variant={"h6"} my={0.5}>
+                        <RokuTypography align={"center"} marked={"center"} variant={"h6"}>
                             Address
                         </RokuTypography>
-                        <RokuTypography variant="body1" gutterBottom>
+                        <RokuTypography variant="body1" gutterBottom align={"center"}>
                             308 Negra Arroyo Ln. ABQ New Mexico. 87104
                         </RokuTypography>
                     </Grid>
