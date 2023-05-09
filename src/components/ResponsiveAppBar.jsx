@@ -27,10 +27,11 @@ const pages = ['Solutions', 'Help', 'Try-on 3D'];
 const settings = ['Sign Up', 'Sign In'];
 const userSettings = ['Dashboard', 'Logout'];
 
-const arrayItemToLink = (page) => {
+const arrayItemToLink = (page, handleClose) => {
     return (
         <MenuItem key={page}
                   component={Link}
+                  onClick={handleClose}
                   to={targetUrlEscape(page)}>
             <RokuTypography textAlign="center">{page}</RokuTypography>
         </MenuItem>
@@ -140,7 +141,7 @@ const ResponsiveAppBar = ({isCurrentDarkTheme, onToggleTheme}) => {
                             }}
                         >
                             {/*small screens kebab menu*/}
-                            {pages.map(arrayItemToLink)}
+                            {pages.map(page => arrayItemToLink(page, handleCloseNavMenu))}
                         </Menu>
                     </Box>
                     <SvgIcon sx={{display: {xs: 'flex', md: 'none'}, mr: 1}}>
@@ -194,8 +195,7 @@ const ResponsiveAppBar = ({isCurrentDarkTheme, onToggleTheme}) => {
                             onClose={handleCloseUserMenu}
                         >
                             {/*user settings menu*/}
-                            {/*{settings.map(arrayItemToLink)}*/}
-                            {isLoggedIn ? userSettings.map(arrayItemToLink) : settings.map(arrayItemToLink)}
+                            {isLoggedIn ? userSettings.map(setting => arrayItemToLink(setting, handleCloseUserMenu)) : settings.map(setting => arrayItemToLink(setting, handleCloseUserMenu))}
 
                             <MenuItem>
                                 <FormGroup>
