@@ -10,6 +10,8 @@
 - Logo: openclipart.org
   - https://openclipart.org/detail/254207/crimson-stylized-mexican-eagle-silhouette
 - HD Images: unsplash.com
+- 3d model:
+  - https://blendswap.com/blend/30999
 
 # TODO:
 
@@ -26,6 +28,8 @@
 [//]: # (- hrefleri router linkle degis)
 
 - degistirelbilir 3d render goster
+
+[//]: # (- xs copyright kirik)
 
 - dil secenegi ekle sol sticky
 
