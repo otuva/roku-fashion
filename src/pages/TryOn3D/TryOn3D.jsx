@@ -30,7 +30,7 @@ const TryOn3D = () => {
                 <Suspense fallback={null}>
                     <Model/>
                     <OrbitControls/>
-                    <Environment preset="park" background/>
+                    <Environment preset="dawn" background/>
                 </Suspense>
             </Canvas>
         </Container>
