@@ -21,7 +21,7 @@ const TryOn3D = () => {
                 Virtual Try-On
             </RokuTypography>
             <RokuTypography  sx={{mb: 4, my: 8}}  variant="body2">
-                {"Try on our designs virtually! "}
+                {"Try on our products virtually! "}
                 {"You can try different combinations of colors and fabrics."}
             </RokuTypography>
             {/*<Canvas pixelRatio={[1, 2]} camera={{ position: [-10, 15, 15], fov: 50 }}>*/}
@@ -30,7 +30,7 @@ const TryOn3D = () => {
                 <Suspense fallback={null}>
                     <Model/>
                     <OrbitControls/>
-                    <Environment preset="dawn" background/>
+                    <Environment preset="park" background/>
                 </Suspense>
             </Canvas>
         </Container>
