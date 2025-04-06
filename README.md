@@ -1,5 +1,7 @@
 # R o k u
 
+keeps breaking idk. idc.
+
 PoC for a bespoke fashion webapp.
 
 Made with React, Material UI, Three.js, and MongoDB (Atlas).
